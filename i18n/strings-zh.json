@@ -35,5 +35,19 @@
   "Transaction": "区块链记录：",
   "Must select a file to upload": "必须选择一个文件上传",
   "File already exists in the system. Redirecting...": "文件已经被注册，将显示详细信息...",
-  "File successfully added to system. Redirecting...": "成功的将文件注册到系统中，将显示详细信息..."
+  "File successfully added to system. Redirecting...": "成功的将文件注册到系统中，将显示详细信息...",
+  "No data available in table":     "没有数据",
+  "Showing _START_ to _END_ of _TOTAL_ entries":           "第 _PAGE_ 页，共 _PAGES_ 页",
+  "Showing 0 to 0 of 0 entries":      "没有数据",
+  "(filtered from _MAX_ total entries)":   "(过滤出 _MAX_ 条记录)",
+  "thousands":      ",",
+  "Show _MENU_ entries":     "每页显示： _MENU_",
+  "Loading...": "正在加载...",
+  "Processing...":     "处理中...",
+  "Search:":         "查找：",
+  "No matching records found":    "没有符合条件的数据",
+  "First":      "第一页",
+  "Last":       "最后一页",
+  "Next":       "下一页",
+  "Previous":   "上一页"
 }

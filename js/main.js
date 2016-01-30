@@ -19,15 +19,20 @@ if (lang != null) {
     userLang = localStorage.getItem("lang");
 }
 console.log("lang: " + userLang);
+var i18n = $.i18n();
+i18n.locale = userLang;
+i18n.debug = true
+i18n.load( {
+    en: 'i18n/strings-en.json',
+    zh: 'i18n/strings-zh.json' 
+});
+
 $(function(){
     var opts = { language: userLang, pathPrefix: "i18n" };
     $("[data-localize]").localize("strings", opts)
 })
 
-var i18n = $.i18n()
-i18n.locale = userLang;
-i18n.load( 'i18n/strings-' + i18n.locale + '.json', i18n.locale )
-
+console.log("1111")
 var translate = function(message) {
     return $.i18n(message);
 };
