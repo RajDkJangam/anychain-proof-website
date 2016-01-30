@@ -4,9 +4,6 @@ var isInteger = function(n) {
     return n == parseInt(n, 10);
 }
 
-var translate = function(x) {
-  return x;
-};
 var show_message = function(message, type) {
   if (!type) {
     type = 'success';
@@ -14,7 +11,7 @@ var show_message = function(message, type) {
   $('.top-right').notify({
     'type': type,
     message: {
-      'text': message
+      'text': translate(message)
     },
     fadeOut: {
       enabled: true,
@@ -25,9 +22,9 @@ var show_message = function(message, type) {
 
 $(document).ready(function() {
   var message = {
-    'format': translate('Must select a file to upload'),
-    'existing': translate('File already exists in the system. Redirecting...'),
-    'added': translate('File successfully added to system. Redirecting...')
+    'format': ('Must select a file to upload'),
+    'existing': ('File already exists in the system. Redirecting...'),
+    'added': ('File successfully added to system. Redirecting...')
   };
 
   var dataTableDef = {
@@ -79,7 +76,9 @@ $(document).ready(function() {
     }
     explain.html(translate('Loading document...'));
     var output = '';
-    output = translate('Preparing to hash ') + escape(f.name) + ' (' + (f.type || translate('n/a')) + ') - ' + f.size + translate(' bytes, last modified: ') + (f.lastModifiedDate ? f.lastModifiedDate
+    output = translate('Preparing to hash ') + f.name + ' (' + (f.type || translate('n/a')) + ') - '
+      + f.size + translate(' bytes, ') + translate('last modified: ')
+      + (f.lastModifiedDate ? f.lastModifiedDate
       .toLocaleDateString() : translate('n/a')) + '';
 
     var reader = new FileReader();
@@ -158,10 +157,16 @@ $(document).ready(function() {
 
   // client-side hash
   var onRegisterSuccess = function(json) {
+    console.log("test111")
+    console.log(json)
     if (json.result == 0) {
-      show_message(vsprintf(message['added'], []), 'success');
+      show_message(message['added'], 'success');
     } else {
-      show_message(message[json.reason], 'warn');
+      if (json.result == 1 && json.reason == 'existing_asset') {
+        show_message(message['existing'], 'warn');
+      } else {
+        show_message(message[json.reason], 'warn');
+      }
     }
     if (json['digest-id']) {
       window.setTimeout(function() {

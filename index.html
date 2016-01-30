@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Proof of Existence</title>
+  <title data-localize="title.proof">Proof of Existence</title>
   <meta charset='utf-8' />
   <meta http-equiv="X-UA-Compatible" content="chrome=1" />
   <meta name="description" content="Proof of Existence" />
@@ -12,18 +12,7 @@
   <link href="css/bootstrap-notify.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
   <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-
-  <script type="text/javascript" src="js/jquery.1.8.0.min.js"></script>
-  <script type="text/javascript" src="js/jquery.form.js"></script>
-  <script type="text/javascript" src="js/crypto.js"></script>
-  <script type="text/javascript" src="js/sprintf.js"></script>
-  <script type="text/javascript" src="js/filedrop.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/bootstrap-notify.js"></script>
-  <script type="text/javascript" src="js/moment.min.js"></script>
-  <script type="text/javascript" src="js/controllers/index.js"></script>
-  <script type="text/javascript" src="js/datatables/jquery.dataTables.min.js"></script>
-
+  <link href="css/languages.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -34,13 +23,17 @@
         <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
           <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
         </button>
-        <a class="brand" href="index.html">Proof of Existence</a>
+        <a class="brand" href="index.html" data-localize="title.proof">Proof of Existence</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
             <!--li class="active"><a href="index.html">Prove</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="developers.html">API</a></li>
             <li><a href="contact.html">Contact</a></li-->
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="?lang=en"><span class="lang-xs lang-lbl" lang="en"></span></a></li>
+              <li><a href="?lang=zh"><span class="lang-xs lang-lbl" lang="zh"></span></a></li>
           </ul>
         </div>
       </div>
@@ -52,7 +45,7 @@
 
     <div id="content">
       <div class="hero-unit">
-        <h3>
+        <h3 data-localize="index.select_title">
           Select a document and have it certified in the private anychain
           <!--small><a href="about.html">What?</a></small-->
         </h3>
@@ -78,7 +71,7 @@
 
         </form>
 
-        <div id="filedrag" style="display: none;" class="dropbox">
+        <div id="filedrag" style="display: none;" class="dropbox" data-localize="index.dropbox">
           Click here or drag and drop your document in the box.
           <br /> The file will NOT be uploaded. The cryptographic proof is calculated client-side.
         </div>
@@ -92,7 +85,7 @@
       <div class="row">
         <div class="span1"></div>
         <div class="span10">
-          <h3>Last documents registered:</h3>
+          <h3 data-localize="index.registered">Last documents registered:</h3>
           <table class="table table-bordered table-striped" id="latest"></table>
         </div>
 
@@ -101,7 +94,7 @@
       <div class="row">
         <div class="span1"></div>
         <div class="span10">
-          <h3>Last documents confirmed in the anychain:</h3>
+          <h3 data-localize="index.confirmed">Last documents confirmed in the anychain:</h3>
           <table class="table table-bordered table-striped" id="latest_confirmed"></table>
         </div>
       </div>
@@ -109,11 +102,32 @@
 
 
     <hr>
-    <footer style="margin-bottom:24px;">
+    <footer style="margin-bottom:24px;" data-localize="title.copyright">
       &copy; Proof of Existence 2015-2016 - by esse.io (<a href="http://www.esse.io">www.esse.io</a>)
     </footer>
 
   </div>
+
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery.form.js"></script>
+  <script type="text/javascript" src="js/crypto.js"></script>
+  <script type="text/javascript" src="js/sprintf.js"></script>
+  <script type="text/javascript" src="js/filedrop.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/bootstrap-notify.js"></script>
+  <script type="text/javascript" src="js/moment.min.js"></script>
+  <script type="text/javascript" src="js/controllers/index.js"></script>
+  <script type="text/javascript" src="js/datatables/jquery.dataTables.min.js"></script>
+  <script src="js/jquery.localize.min.js"></script>
+  <script src="js/jquery.i18n-min.js"></script>
+  <script src="js/jquery.i18n.messagestore-min.js"></script>
+  <script src="js/jquery.i18n.parser-min.js"></script>
+  <script src="js/jquery.i18n.emitter-min.js"></script>
+  <script src="js/jquery.i18n.language-min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script type="text/javascript" charset="utf-8">
+  </script>
 
 </body>
 

@@ -4,7 +4,7 @@
 
 <head>
 
-  <title>Proof of Existence</title>
+  <title data-localize="title.proof">Proof of Existence</title>
   <meta charset='utf-8' />
   <meta http-equiv="X-UA-Compatible" content="chrome=1" />
   <meta name="description" content="Proof of Existence" />
@@ -12,16 +12,6 @@
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/bootstrap-notify.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
-
-  <script type="text/javascript" src="js/jquery.1.8.0.min.js"></script>
-  <script type="text/javascript" src="js/jquery.form.js"></script>
-  <script type="text/javascript" src="js/crypto.js"></script>
-  <script type="text/javascript" src="js/sprintf.js"></script>
-  <script type="text/javascript" src="js/filedrop.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/bootstrap-notify.js"></script>
-  <script type="text/javascript" src="js/moment.min.js"></script>
-  <script type="text/javascript" src="js/controllers/detail.js"></script>
 </head>
 
 <body>
@@ -32,7 +22,7 @@
         <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
           <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
         </button>
-        <a class="brand" href="./">Proof of Existence</a>
+        <a class="brand" href="./" data-localize="title.proof">Proof of Existence</a>
         <!--div class="nav-collapse collapse">
           <ul class="nav">
             <li class="active"><a href="./">Prove</a></li>
@@ -51,21 +41,20 @@
     <div id="content">
 
 
-      <h3>
-  Document information <small id="digest">Loading...</small>
-</h3>
-      <div id="timestamp">Please wait</div>
+      <h3 data-localize="detail.loading">Document information </h3>
+      <small id="digest">Loading...</small>
+      
+      <div id="timestamp" data-localize="detail.wait">Please wait</div>
 
       <div class='hero-unit' id='certify_message' style="display: none;">
-        <h3>Want this document certified by a decentralized proof of
-    existence?</h3>
-        <p>We can embed the document's digest in the anychain for you for <strong>FREE</strong>!</p>
+        <h3></h3>
+        <p data-localize="detail.desc">We can embed the document's digest in the anychain for you for <strong>FREE</strong>!</p>
 
         <hr />
         <div class='row-fluid'>
           <div class='span6' id='qr'></div>
           <div class='span6' id='payment_text'>
-            <div>Please send <strong>5 mBTC</strong> or more to:</div>
+            <div></div>
             <strong id='payment_link'>
             </strong>
             <div id="wait" class="row">
@@ -85,20 +74,36 @@
       <div class='hero-unit' id='confirming_message' style="display: none;">
       </div>
       <div class='hero-unit' id='confirmed_message' style="display: none;">
-        <h3>Congratulations!</h3>
-        <p>This document's digest was successfully embedded in the private anychain. It is now permanently certified and proven to exist since the transaction was confirmed.</p>
+        <h3 data-localize="detail.congratulations">Congratulations!</h3>
+        <p data-localize="detail.confirmed">This document's digest was successfully embedded in the private anychain. It is now permanently certified and proven to exist since the transaction was confirmed.</p>
         <p id="tx"></p>
-        <p>If you want to verify this document in the future, just re-submit it in
+        <p data-localize="detail.resubmit">If you want to verify this document in the future, just re-submit it in
           <a href="/website/">the homepage</a> and we'll recognize and validate it.
         </p>
       </div>
     </div>
 
     <hr>
-    <footer style="margin-bottom:24px;">
+    <footer style="margin-bottom:24px;" data-localize="title.copyright">
       &copy; Proof of Existence 2015-2016 - by esse.io (<a href="http://www.esse.io">www.esse.io</a>)
     </footer>
   </div>
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery.form.js"></script>
+  <script type="text/javascript" src="js/crypto.js"></script>
+  <script type="text/javascript" src="js/sprintf.js"></script>
+  <script type="text/javascript" src="js/filedrop.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/bootstrap-notify.js"></script>
+  <script type="text/javascript" src="js/moment.min.js"></script>
+  <script type="text/javascript" src="js/controllers/detail.js"></script>
+  <script src="js/jquery.localize.min.js"></script>
+  <script src="js/jquery.i18n-min.js"></script>
+  <script src="js/jquery.i18n.messagestore-min.js"></script>
+  <script src="js/jquery.i18n.parser-min.js"></script>
+  <script src="js/jquery.i18n.emitter-min.js"></script>
+  <script src="js/jquery.i18n.language-min.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 
