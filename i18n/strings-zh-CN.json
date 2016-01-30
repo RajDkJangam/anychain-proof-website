@@ -1,7 +1,7 @@
 {
   "title": {
     "proof": "存在性证明",
-    "copyright": "&copy; 存在性证明 2015-2016 - by 质本网络科技 (<a href=http://www.esse.io>www.esse.io</a>)"
+    "copyright": "&copy; 存在性证明 2015-2016 - by 质本网络科技 (<a href='http://www.esse.io'>www.esse.io</a>)"
   },
   "index": {
     "select_title": "选择一个文档并在私有的anychain中进行验证",
@@ -15,7 +15,7 @@
     "desc": "你的文档的哈希值将被免费的加入到私有区块链<strong>anychain</strong>中!",
     "congratulations": "祝贺您!",
     "confirmed": "这个文档的哈希值已经被记录到了私有区块链中. 记录已经在区块链中得到确认，将不会被任何人篡改.",
-    "resubmit": "如果你将来需要验证该文档是否被修改过，只需要在<a href=/website/>首页</a>中重新提交文档，如果该文档没有被修改，您将会得到原始的区块链中的记录哈希值（transaction id），否则，我们将会生成新的记录哈希值到区块链中。"
+    "resubmit": "如果你将来需要验证该文档是否被修改过，只需要在(<a href='/website/'>首页</a>)中重新提交文档，如果该文档没有被修改，您将会得到原始的区块链中的记录哈希值（transaction id），否则，我们将会生成新的记录哈希值到区块链中。"
   },
   "Loading document...": "载入中...",
   "Preparing to hash ": "准备计算 ",
@@ -36,18 +36,18 @@
   "Must select a file to upload": "必须选择一个文件上传",
   "File already exists in the system. Redirecting...": "文件已经被注册，将显示详细信息...",
   "File successfully added to system. Redirecting...": "成功的将文件注册到系统中，将显示详细信息...",
-  "No data available in table":     "没有数据",
-  "Showing _START_ to _END_ of _TOTAL_ entries":           "第 _PAGE_ 页，共 _PAGES_ 页",
-  "Showing 0 to 0 of 0 entries":      "没有数据",
-  "(filtered from _MAX_ total entries)":   "(过滤出 _MAX_ 条记录)",
+  "emptyTable":     "没有数据",
+  "info":           "第 _PAGE_ 页，共 _PAGES_ 页",
+  "infoEmpty":      "没有数据",
+  "infoFiltered":   "(过滤出 _MAX_ 条记录)",
   "thousands":      ",",
-  "Show _MENU_ entries":     "每页显示： _MENU_",
-  "Loading...": "正在加载...",
-  "Processing...":     "处理中...",
-  "Search:":         "查找：",
-  "No matching records found":    "没有符合条件的数据",
-  "First":      "第一页",
-  "Last":       "最后一页",
-  "Next":       "下一页",
-  "Previous":   "上一页"
+  "lengthMenu":     "每页显示： _MENU_",
+  "loadingRecords": "正在加载...",
+  "processing":     "处理中...",
+  "search":         "查找：",
+  "zeroRecords":    "没有符合条件的数据",
+  "paginate_first":      "第一页",
+  "paginate_last":       "最后一页",
+  "paginate_next":       "下一页",
+  "paginate_previous":   "上一页"
 }

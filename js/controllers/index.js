@@ -87,23 +87,6 @@ $(document).ready(function() {
   }
 
   // latest documents
-              //   "emptyTable":     translate("emptyTable"),
-              // "info":           translate("info"),
-              // "infoEmpty":      translate("infoEmpty"),
-              // "infoFiltered":   translate("infoFiltered"),
-              // "thousands":      ",",
-              // "lengthMenu":     translate("lengthMenu"),
-              // "loadingRecords": translate("loadingRecords"),
-              // "processing":     translate("processing"),
-              // "search":         translate("search"),
-              // "zeroRecords":    translate("zeroRecords"),
-              // "paginate": {
-              //     "first":      translate("paginate_first"),
-              //     "last":       translate("paginate_last"),
-              //     "next":       translate("paginate_next"),
-              //     "previous":   translate("paginate_previous")
-              // },
-
   var refreshLatest = function(confirmed, table) {
     $.getJSON('http://192.168.250.3:9099/api/v1/assets/search?is-confirmed='
         + confirmed, function(data) {
@@ -142,21 +125,21 @@ $(document).ready(function() {
           dom: 'lrtip',
           "order": [[ 2, "desc" ]],
           "language": {
-              "emptyTable":     translate("No data available in table"),
-              "info":           translate("Showing _START_ to _END_ of _TOTAL_ entries"),
-              "infoEmpty":      translate("Showing 0 to 0 of 0 entries"),
-              "infoFiltered":   translate("(filtered from _MAX_ total entries)"),
+              "emptyTable":     translate("emptyTable"),
+              "info":           translate("info"),
+              "infoEmpty":      translate("infoEmpty"),
+              "infoFiltered":   translate("infoFiltered"),
               "thousands":      ",",
-              "lengthMenu":     translate("Show _MENU_ entries"),
-              "loadingRecords": translate("Loading..."),
-              "processing":     translate("Processing..."),
-              "search":         translate("Search:"),
-              "zeroRecords":    translate("No matching records found"),
+              "lengthMenu":     translate("lengthMenu"),
+              "loadingRecords": translate("loadingRecords"),
+              "processing":     translate("processing"),
+              "search":         translate("search"),
+              "zeroRecords":    translate("zeroRecords"),
               "paginate": {
-                  "first":      translate("First"),
-                  "last":       translate("Last"),
-                  "next":       translate("Next"),
-                  "previous":   translate("Previous")
+                  "first":      translate("paginate_first"),
+                  "last":       translate("paginate_last"),
+                  "next":       translate("paginate_next"),
+                  "previous":   translate("paginate_previous")
               },
               "aria": {
                   "sortAscending":  ": activate to sort column ascending",

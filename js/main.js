@@ -22,17 +22,13 @@ console.log("lang: " + userLang);
 var i18n = $.i18n();
 i18n.locale = userLang;
 i18n.debug = true
-i18n.load( {
-    en: 'i18n/strings-en.json',
-    zh: 'i18n/strings-zh.json' 
-});
+i18n.load('i18n/strings-' + userLang + '.json', userLang);
 
 $(function(){
     var opts = { language: userLang, pathPrefix: "i18n" };
     $("[data-localize]").localize("strings", opts)
 })
 
-console.log("1111")
 var translate = function(message) {
     return $.i18n(message);
 };
