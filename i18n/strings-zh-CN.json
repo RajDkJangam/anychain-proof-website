@@ -24,7 +24,7 @@
   "Now hashing... ": "正在计算哈希值... ",
   "Initializing": "初始化",
   "Document hash: ": "文档的哈希值：",
-  "Document Digest": "文档哈希值",
+  "Document Hash": "文档哈希值",
   "Timestamp": "确认时间",
   "Error!": "错误！",
   "We couldn't find that document": "无法找到文档",
