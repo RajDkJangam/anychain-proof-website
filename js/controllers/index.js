@@ -95,7 +95,7 @@ $(document).ready(function() {
       table.append(
         '<thead><tr><th style="width: 1%"></th>'
         + '<th style="width: 69%">'
-        + translate('Document Digest') + '</th>'
+        + translate('Document Hash') + '</th>'
         + '<th style="width: 30%">'
         + translate('Timestamp') + '</th>'
         + '</tr></thead>');
