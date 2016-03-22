@@ -36,6 +36,7 @@ $(document).ready(function() {
   var explain = $('#explain');
   var dropbox = $('.dropbox');
 
+  var selectedFile;
   // uncomment this to try non-HTML support:
   //window.File = window.FileReader = window.FileList = window.Blob = null;
 
@@ -60,6 +61,7 @@ $(document).ready(function() {
       bar.addClass('bar-success');
       explain.html(translate('Now hashing... ') + translate('Initializing'));
       setTimeout(function() {
+        selectedFile = f
         CryptoJS.SHA256(data, crypto_callback, crypto_finish);
       }, 200);
 
@@ -187,7 +189,7 @@ $(document).ready(function() {
     $.ajax({
       url: 'http://192.168.250.3:9099/api/v1/assets',
       type: 'post',
-      data: JSON.stringify({'digest-id': hash.toString()}),
+      data: JSON.stringify({'digest-id': hash.toString(), 'filename':selectedFile.name, 'filetype':selectedFile.type, 'last-modified': selectedFile.lastModifiedDate}),
       dataType   : 'json',
       success: onRegisterSuccess
     });
